@@ -1,0 +1,99 @@
+<%- include("partials/NavBar") %>
+    <!-- Checkout section -->
+<section id="checkout">
+  <div class="shipping">
+    <h2>1. Shipping Details</h2>
+    <div class="baneer">
+      <div class="name">
+        <input type="text" placeholder="Prénom" data-required="1" />
+        <input type="text" placeholder="Nom" data-required="1" />
+      </div>
+      <div class="adress">
+        <input type="text" placeholder="Adresse" data-required="1" />
+      </div>
+      <div class="city">
+        <input type="text" placeholder="Code postal" data-required="1" />
+        <input type="text" placeholder="Ville" data-required="1" />
+      </div>
+      <div class="country">
+        <select data-required="1">
+          <option value="Selectionner un pays">Selectionner un pays</option>
+          <option value="Selectionner un pays">France</option>
+          <option value="Selectionner un pays">Angleterre</option>
+          <option value="Selectionner un pays">Allemagne</option>
+        </select>
+      </div>
+    </div>
+    <div id="radio">
+      <input type="checkbox" name="Newsletter" id="newsletter"/>
+      <label for="newsletter">Sign up for exclusive offers and news</label>
+    </div>
+    <div class="delivery">
+      <h2>2. Options de livraisons</h2>
+      <div class="baneer">
+        <div class="options">
+          <input type="radio" name="Delivery Mode" id="Colissimo" />
+          <label for="Colissimo">Livraison Colissimo : 3 à 5 jours ouvrées</label>
+        </div>
+        <div class="options">
+          <input type="radio" name="Delivery Mode" id="Mondial Relay" />
+          <label for="Mondial Relay">Livraison Mondial Relay : 2 jours ouvrées</label>
+        </div>
+        <div class="options">
+          <input type="radio" name="Delivery Mode" id="UPS express" />
+          <label for="UPS express">Livraison UPS Express : 24h ouvrées</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="summary">
+    <h2>3. Order Summary</h2>
+    <div class="summary__banner">
+      <div id="sum-border"></div>
+      <div class="panier">
+        <div class="panier__price" id="cart__products"">
+        </div>
+        <div id="border"></div>
+        <div class="price subtotal">
+          <h6>Sous-Total :&nbsp</h6>
+          <h6 id="price__product">50.00€</h6>
+        </div>
+        <div class="price subtotal">
+          <h6>Frais de livraison :&nbsp</h6>
+          <h6 id="price__shipping"> 15.00€</h6>
+        </div>
+        <div class="price subtotal">
+          <h6 style="font-weight: 700">Total : &nbsp</h6>
+          <h6  id="price__total" style="font-weight: 700">65.00€</h6>
+        </div>
+        <div id="border"></div>
+        <div class="price">
+          <input type="text" placeholder="Code promotionnelle" />
+          <button>Apply</button>
+        </div>
+        <div id="border"></div>
+        <div class="price">
+          <h2>4. Méthode de Paiement</h2>
+        </div>
+        <div class="methode">
+          <div class="radio">
+            <input type="radio" name="Paiement" id="credit__cart" />
+            <label for="credit__cart">Carte de crédit</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="Paiement" id="virement__bancaire" />
+            <label for="virement__bancaire">Virement Bancaire</label>
+          </div>
+          <div id="btn-paiement">
+            <button>Procéder au Paiement</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <%- include("partials/Footer")  %> 
+    <script src="/js/panier.js"></script>
+  </body>
+</html>
