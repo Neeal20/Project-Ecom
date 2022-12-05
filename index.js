@@ -1,29 +1,42 @@
 // Import et utilisation du module express
 const express = require('express');
 const app = express();
+// Import dotenv
 const dotenv = require('dotenv');
-const result = dotenv.config();
+require("dotenv/config");
 const productsRoutes = require('./controllers/ProductsController');
-// Import middleware cors permettant d'ouvrir les droits à l'API products
-const cors = require('cors');
+// Import du router
 const router = require('./router');
-require('dotenv').config;
 // Import du de la connection avec MongoDb
 require('./models/dbConfig');
-
+// Middleware session
+const sessionMiddleware = require("./middlewares/sessionMiddleware");
+const addLoggedInUserToLocals = require("./middlewares/addLoggedInUserToLocals");
 // Import du middleware 404
-const middleware404 = require("./middleware/middleware404");
+const middleware404 = require("./middlewares/middleware404");
+// Import middleware cors permettant d'ouvrir les droits à l'API products
+const cors = require('cors');
+
 
 // Configuration du moteur de template EJS
 app.set("view engine", "ejs");
 app.set("views", ('./views'));
 
-// Middleware
-// BodyParser pour Parse les datas en JSON
+// Configurer les sessions
+app.use(sessionMiddleware);
+
+// Locals session
+app.use(addLoggedInUserToLocals);
+
+// Ouvrir les données aux ip
 app.use(cors());
+
+// BodyParser pour Parse les datas en JSON
 app.use(express.json());
-app.use(express.static("./public")); // Fichier accessible sans créer de route grâce au "public"
 app.use(express.urlencoded({limit: '50mb', extended: true}));
+
+// Fichier accessible sans créer de route grâce au "public"
+app.use(express.static("./public"));
 
 // Utilisation du Router Products
 app.use('/', productsRoutes);

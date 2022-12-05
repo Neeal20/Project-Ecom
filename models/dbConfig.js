@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  'mongodb+srv://Neal20:0ucXUnmA6XsQ6u7G@cluster0.fybmcr3.mongodb.net/E-Commerce?retryWrites=true&w=majority',
+  'mongodb+srv://doadmin:3Sp9MnC615H8I4f2@db-mongodb-lon1-68624-22ee3051.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=db-mongodb-lon1-68624',
   { useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => {
     console.log('Mongodb connected');

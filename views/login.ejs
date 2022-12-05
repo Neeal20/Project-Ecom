@@ -4,7 +4,12 @@
         <div class="form login">
             <div class="form-content">
                 <header>Login</header>
-                <form action="/#" method="POST">
+                <form action="/login" method="POST">
+                    <% if (locals.errorMessage) { %>
+                        <div class="alert alert-danger" role="alert">
+                          <%= locals.errorMessage %> 
+                        </div>
+                      <% } %>
                     <div class="field input-field">
                         <input type="email" placeholder="Email" class="input" name="email">
                     </div>

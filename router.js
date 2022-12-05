@@ -24,12 +24,14 @@ router.get("/cart", (req, res, next) => {
   res.render("cart");
 });
 
-router.get("/login", (req,res,next) => {
-  res.render("login");
-});
+router.get("/login", userAuthController.renderLoginPage);
+router.post("/login", userAuthController.handleLoginForm);
+
+router.post('login', );
 
 router.get("/signup", userAuthController.renderSignupPage);
 router.post("/signup", userAuthController.handleSignupForm);
+
 
 
 module.exports = router;
