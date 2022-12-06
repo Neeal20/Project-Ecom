@@ -1,13 +1,13 @@
 // Import et utilisation du module express
 const express = require('express');
 const app = express();
-// Import dotenv
-require("dotenv/config");
-const productsRoutes = require('./controllers/ProductsController');
+
 // Import du router
 const router = require('./router/router');
 // Import du de la connection avec MongoDb
 require('./database/dbConfig');
+// Import dotenv
+require("dotenv/config");
 // Middleware session
 const sessionMiddleware = require("./middlewares/sessionMiddleware");
 const addLoggedInUserToLocals = require("./middlewares/addLoggedInUserToLocals");
@@ -16,6 +16,20 @@ const middleware404 = require("./middlewares/middleware404");
 // Import middleware cors permettant d'ouvrir les droits à l'API products
 const cors = require('cors');
 
+app.use('request', (req,res) => {
+  // On spécifie l'entête pour le CORS
+  res.setHeader('Access-Control-Allow-Origin', '*');
+
+  // On gère le cas où le navigateur fait un pré-contrôle avec OPTIONS ...
+  // ... pas besoin d'aller plus loin dans le traitement, on renvoie la réponse
+  if (res.method === 'OPTIONS') {
+    // On liste des méthodes et les entêtes valides
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept, Origin, Authorization');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+
+    return res.end();
+  }
+});
 
 // Configuration du moteur de template EJS
 app.set("view engine", "ejs");
@@ -36,9 +50,6 @@ app.use(cors());
 
 // Fichier accessible sans créer de route grâce au "public"
 app.use(express.static("./public"));
-
-// Utilisation du Router Products
-app.use('/', productsRoutes);
 
 // On plug le router
 app.use(router);
