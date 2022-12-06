@@ -1,0 +1,4 @@
+PORT= 5500
+PG_URL=postgres://commerce:commerce@localhost:5432/commerce
+SALT_ROUNDS= 20
+SESSION_SECRET= motdepasse
