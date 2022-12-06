@@ -1,3 +1,0 @@
-PORT=5500
-PG_URL=postgres://postgres:postgres@localhost:5432/postgres
-SALT_ROUNDS=10
