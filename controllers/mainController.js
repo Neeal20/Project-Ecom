@@ -1,10 +1,7 @@
-const clc = require("cli-color");
-let notice = clc.blue;
-
 const mainController = {
   async renderHomePage(req, res) {
     const user = req.app.locals.user; // On a besoin de récupérer l'user
-    console.log(notice(user));
+    console.log(user);
     try {
       res.render("home", { user });
     } catch (error) {
