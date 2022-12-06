@@ -1,0 +1,35 @@
+<%- include("partials/NavBar") %>
+<body>
+    <section class="container forms" id="container__forms">
+        <div class="form login" id="form__profile">
+            <div class="form-content">
+                <header>Profil : <br>
+                    <%= user.firstname %>
+                </header>
+                <form action="/login" method="POST">
+                    <% if (locals.errorMessage) { %>
+                        <div class="alert alert-danger" role="alert">
+                          <%= locals.errorMessage %> 
+                        </div>
+                      <% } %>
+                    <div class="field input-field">
+                        <div class="input__form">
+                            <label for="actualPassword">Ancien mot de passe</label>
+                            <input type="password" name="actualPassword" id="actualPassword" placeholder="Ancien mot de passe">
+                        </div>
+                        <div class="input__form">
+                            <label for="newPassword">Nouveau mot de passe</label>
+                            <input type="password" id="newPassword" placeholder="Nouveau mot de passe" class="newPassword" name="password">
+    
+                        </div>
+                        <div class="input__form">
+                            <label for="confirmNewPassword">Confirmer le nouveau mot de passe</label>
+                            <input type="password" id="confirmNewPassword" placeholder="Confirmer le nouveau mot de passe" class="confirmNewPassword" name="password">
+                        </div>
+                        <button class="form__profile--change">Sauvegarder les changements</button>
+                    </div>
+    </section>
+    <script src="/js/home.js"></script>
+    <script src="/js/login.js"></script>
+</body>
+</html>

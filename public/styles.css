@@ -1599,12 +1599,11 @@ img.google-img{
 }
 a.google{
     border: 1px solid #CACACA;
-    background-color: rgb(239, 240, 241);
+    background-color: var(--color-primary)
 }
 a.google span{
-    font-weight: 500;
-    opacity: 0.6;
-    color: #232836;
+    color: #fff;
+    background-color: var( --color-primary);
 }
 
 @media screen and (max-width: 400px) {
@@ -1619,4 +1618,40 @@ a.google span{
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0);
   border: none;
+}
+
+#form__profile {
+  height: 50vh;
+}
+
+.input__form {
+  margin: 1rem 0;
+}
+
+.form__profile--change {
+  margin-top: 2rem;
+}
+
+.form .field {
+    position: relative;
+    /* height: 37px; */
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+#container__forms {
+  height: 54.3vh
+}
+
+#google {
+  height: 28px;
+  width: 28px;
+  color: var( --color-primary);
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }

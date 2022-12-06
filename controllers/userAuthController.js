@@ -3,7 +3,12 @@ const emailValidator = require("email-validator");
 const { User } = require("../models/index");
 
 function renderLoginPage(req, res) {
-  res.render("login");
+  try {
+    res.render("login");
+  } catch (error) {
+    console.error(error);
+    res.status(404).render("404");
+  }
 }
 
 async function handleLoginForm (req,res) {
@@ -39,13 +44,18 @@ async function handleLoginForm (req,res) {
 }
 
 function renderSignupPage(req, res) {
-  res.render("signup");
+  try {
+    res.render("signup");
+  } catch (error) {
+    console.error(error);
+    res.status(404).render("404");
+  }
 }
 
 async function handleSignupForm(req, res) {
   try {
   // - Récupérer les info de l'utilisateur depuis le body du POST
-    const {email, password, confirmation } = req.body;
+    const {firstname, lastname, email, password, confirmation } = req.body;
 
     // - CONTROLES DES INPUTS - Vérifier que le password + le confirmation_password match bien.
     if (password !== confirmation) {
@@ -77,10 +87,14 @@ async function handleSignupForm(req, res) {
     const saltRounds = parseInt(process.env.SALT_ROUNDS); // Le temps que prend l'algorithme pour hasher le MDP. Plus c'est grand, plus c'est safe. Plus c'est grand, plus c'est pénible pour l'utilisateur d'attendre.
     const encryptedPassword = await bcrypt.hash(password, saltRounds);
 
+    const role = "member";
     // - Création de l'utilisateur dans la BDD
     await User.create({
       email,
-      password: encryptedPassword
+      firstname,
+      lastname,
+      password: encryptedPassword,
+      role: role
     });
 
     // Rediriger vers la page de connexion
@@ -92,9 +106,16 @@ async function handleSignupForm(req, res) {
   }
 }
 
+async function logoutAndRedirect(req, res) {
+  req.session.userId = null; // Retirer l'utilisateur de la session
+
+  res.redirect("/");
+}
+
 module.exports = {
   renderLoginPage,
   handleLoginForm,
   renderSignupPage,
-  handleSignupForm
+  handleSignupForm,
+  logoutAndRedirect
 };

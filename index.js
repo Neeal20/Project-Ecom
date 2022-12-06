@@ -2,13 +2,12 @@
 const express = require('express');
 const app = express();
 // Import dotenv
-const dotenv = require('dotenv');
 require("dotenv/config");
 const productsRoutes = require('./controllers/ProductsController');
 // Import du router
-const router = require('./router');
+const router = require('./router/router');
 // Import du de la connection avec MongoDb
-require('./models/dbConfig');
+require('./database/dbConfig');
 // Middleware session
 const sessionMiddleware = require("./middlewares/sessionMiddleware");
 const addLoggedInUserToLocals = require("./middlewares/addLoggedInUserToLocals");
@@ -22,6 +21,10 @@ const cors = require('cors');
 app.set("view engine", "ejs");
 app.set("views", ('./views'));
 
+// BodyParser pour Parse les datas en JSON
+app.use(express.json());
+app.use(express.urlencoded({limit: '50mb', extended: true}));
+
 // Configurer les sessions
 app.use(sessionMiddleware);
 
@@ -30,10 +33,6 @@ app.use(addLoggedInUserToLocals);
 
 // Ouvrir les données aux ip
 app.use(cors());
-
-// BodyParser pour Parse les datas en JSON
-app.use(express.json());
-app.use(express.urlencoded({limit: '50mb', extended: true}));
 
 // Fichier accessible sans créer de route grâce au "public"
 app.use(express.static("./public"));
