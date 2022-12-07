@@ -1676,6 +1676,8 @@ a.google span{
   background-color: #fff;
 }
 
+/* ------------------------------------------------- Media screen */
+
 @media (min-width: 400px) and (max-width: 1200px) {
   footer {
     display: flex;
