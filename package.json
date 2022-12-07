@@ -42,5 +42,8 @@
   "bugs": {
     "url": "https://github.com/Neeal20/Project-Ecom/issues"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "homepage": "https://github.com/Neeal20/Project-Ecom#readme"
 }
