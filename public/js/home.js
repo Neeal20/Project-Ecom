@@ -1,7 +1,7 @@
 const displayHomePage = {
   // Home Page création
   productDisplay: async (product) => {
-    fetch(`http://localhost:5500/products`)
+    fetch(`http://localhost:3000/products`)
       .then((res) => res.json())
       .then((productsData) => {
         document.querySelector(".pro__container").innerHTML = productsData.map(

@@ -15,7 +15,7 @@ function getChemiseId() {
 
 // Fetch pour récupérer les datas du produit
 function fetchArticle(chemiseId) {
-  return fetch(`http://localhost:5500/products/${chemiseId}`)
+  return fetch(`http://localhost:3000/products/${chemiseId}`)
     .then((response) => response.json())
     // eslint-disable-next-line no-undef
     .then((apiArticle) => (article = apiArticle))

@@ -5,7 +5,6 @@ const userAuthController = require('../controllers/userAuthController');
 const productsController = require('../controllers/productsController');
 const cartController = require('../controllers/cartController');
 const isLoggedIn = require('../middlewares/isLoggedIn');
-const isAdmin = require('../middlewares/isAdmin');
 
 // Afficher la page home
 router.get("/",mainController.renderHomePage);
