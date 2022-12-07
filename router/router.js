@@ -2,7 +2,7 @@ const { Router } = require("express");
 const router = Router();
 const mainController = require('../controllers/mainController');
 const userAuthController = require('../controllers/userAuthController');
-const productsController = require('../controllers/productsController');
+const productController = require('../controllers/productController');
 const cartController = require('../controllers/cartController');
 const isLoggedIn = require('../middlewares/isLoggedIn');
 
@@ -14,7 +14,7 @@ router.get("/home",mainController.renderHomePage);
 router.get("/profile", isLoggedIn, mainController.renderUserProfilePage);
 
 // Afficher la page de produit unique
-router.get("/product", productsController.renderProductPage);
+router.get("/product", productController.renderProductPage);
 
 // Afficher la page panier
 router.get("/cart", cartController.renderCartPage);
@@ -32,18 +32,18 @@ router.get("/logout", isLoggedIn, userAuthController.logoutAndRedirect);
 
 // MongoDb router
 // Fetch All products
-router.get("/products", productsController.fetchAllProducts);
+router.get("/products", productController.fetchAllProducts);
 
 // Fetch One product
-router.get("/products/:id", productsController.fetchOneProduct);
+router.get("/products/:id", productController.fetchOneProduct);
 
 // Insert product
-router.post("/products", productsController.insertToDb);
+router.post("/products", productController.insertToDb);
 
 // Update product
-router.put("/products/:id", productsController.updateProduct);
+router.put("/products/:id", productController.updateProduct);
 
 // Delete product
-router.delete("products/:id", productsController.deleteProduct);
+router.delete("products/:id", productController.deleteProduct);
 
 module.exports = router;

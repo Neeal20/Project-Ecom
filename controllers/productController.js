@@ -2,7 +2,7 @@ const ObjectID = require('mongoose').Types.ObjectId;
 // Import du modèle de produits
 const { Products } = require ('../models/Products');
 
-const productsController = {
+const productController = {
   renderProductPage (req,res) {
     try {
       res.render("product");
@@ -93,4 +93,4 @@ const productsController = {
   }
 };
 
-module.exports = productsController;
+module.exports = productController;
