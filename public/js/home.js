@@ -1,12 +1,14 @@
-const displayHomePage = {
-  // Home Page création
-  productDisplay: async (product) => {
-    fetch(`http://localhost:3000/products`)
-      .then((res) => res.json())
-      .then((productsData) => {
-        document.querySelector(".pro__container").innerHTML = productsData.map(
-          (product) =>
-            `<div class="pro__container--product">
+const cart = [];
+const numberOfItems = localStorage.length;
+
+// Home Page création
+async function productDisplay() {
+  fetch(`http://localhost:3000/products`)
+    .then((res) => res.json())
+    .then((productsData) => {
+      document.querySelector(".pro__container").innerHTML = productsData.map(
+        (product) =>
+          `<div class="pro__container--product">
             <a href="product?id=${product._id}">
               <img src="${product.img}" alt="chemise"></img>
             </a>
@@ -26,81 +28,69 @@ const displayHomePage = {
               <i class="fa-regular fa-heart heart"></i>
             </a>
           </div>`
-        )
-          .join("");
-      });
-  },
-
-  onScrollNavDisplay: function () {
-    const body = document.body;
-    let lastScroll = 0;
-    window.addEventListener("scroll", () => {
-      const currentScroll = window.pageYOffset;
-      if (currentScroll <= 0) {
-        body.classList.remove("scroll-up");
-      }
-      // Si le scroll actuelle est = 0 et est suéprieur a la dernière valeur de scroll et que le body ne contient pas la classe "scroll down"
-      if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
-        body.classList.remove("scroll-up");
-        body.classList.add("scroll-down");
-        //  If it's true, we remove the scroll up to add this scroll down
-      }
-      // We now want to add the reverse effect, (mean to see the navBar again by scrolling up)
-      if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
-        body.classList.remove("scroll-down");
-        body.classList.add("scroll-up");
-      }
-      lastScroll = currentScroll;
+      )
+        .join("");
     });
-  },
-
-  hamburgerMenuMobile: function () {
-    const bar = document.getElementById("bar");
-    const navBar = document.getElementById("nav__list");
-    const close = document.getElementById("close");
-    if (bar) {
-      bar.addEventListener("click", () => {
-        navBar.classList.add("active");
-      });
-    }
-
-    if (close) {
-      close.addEventListener("click", () => {
-        navBar.classList.remove("active");
-      });
-    }
-  },
-
-  showCartMenu: function() {
-    const openPanelButton = document.getElementById("open__panel");
-    const closePanelButton = document.getElementById("close__panel");
-    const cartPanel = document.querySelector(".cart__panel");
-    openPanelButton.addEventListener("click", () => {
-      cartPanel.classList.add("open");
-      openPanelButton.classList.add("hide");
-    });
-    closePanelButton.addEventListener("click", () => {
-      cartPanel.classList.remove("open");
-      openPanelButton.classList.remove("hide");
-    });
-  },
-
-  init:function () {
-    displayHomePage.productDisplay();
-    displayHomePage.onScrollNavDisplay();
-    displayHomePage.hamburgerMenuMobile();
-    displayHomePage.showCartMenu();
-  }
-};
-displayHomePage.init();
-
-const cart = [];
-const numberOfItems = localStorage.length;
+}
 
 function cartContent () {
   window.addEventListener("load", () => {
     ItemsFromStore();
     EachProductToCart();
+  });
+}
+
+function onScrollNavDisplay () {
+  const body = document.body;
+  let lastScroll = 0;
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll <= 0) {
+      body.classList.remove("scroll-up");
+    }
+    // Si le scroll actuelle est = 0 et est suéprieur a la dernière valeur de scroll et que le body ne contient pas la classe "scroll down"
+    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
+      body.classList.remove("scroll-up");
+      body.classList.add("scroll-down");
+      //  If it's true, we remove the scroll up to add this scroll down
+    }
+    // We now want to add the reverse effect, (mean to see the navBar again by scrolling up)
+    if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
+      body.classList.remove("scroll-down");
+      body.classList.add("scroll-up");
+    }
+    lastScroll = currentScroll;
+  });
+}
+
+function hamburgerMenuMobile () {
+  const bar = document.getElementById("bar");
+  const navBar = document.getElementById("nav__list");
+  const close = document.getElementById("close");
+  if (bar) {
+    bar.addEventListener("click", () => {
+      navBar.classList.add("active");
+    });
+  }
+
+  if (close) {
+    close.addEventListener("click", () => {
+      navBar.classList.remove("active");
+    });
+  }
+}
+
+function showCartMenu () {
+  const openPanelButton = document.getElementById("open__panel");
+  const closePanelButton = document.getElementById("close__panel");
+  const cartPanel = document.querySelector(".cart__panel");
+  openPanelButton.addEventListener("click", () => {
+    cartPanel.classList.add("open");
+    openPanelButton.classList.add("hide");
+  });
+  closePanelButton.addEventListener("click", () => {
+    cartPanel.classList.remove("open");
+    openPanelButton.classList.remove("hide");
   });
 }
 
@@ -178,7 +168,15 @@ function EachProductToCart() {
   });
 }
 
-deleteAllItems();
-cartContent();
-changeCartIcon();
+function init() {
+  productDisplay();
+  onScrollNavDisplay();
+  hamburgerMenuMobile();
+  showCartMenu();
+  deleteAllItems();
+  cartContent();
+  changeCartIcon();
+}
+init();
+
 

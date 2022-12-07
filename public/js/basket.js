@@ -1,4 +1,3 @@
-// Création d'un objet "productData pour ranger et trouver facilement toutes nos fonctions liés aux datas du produit"
 const productName = document.getElementById("name");
 const productPrice = document.getElementById("price");
 const productImg = document.getElementById("MainImg");
@@ -31,13 +30,6 @@ function displayChemiseData(article) {
   productPrice.value = article.price;
   productImg.src = article.img;
   productDescription.textContent = article.description;
-}
-
-function isOrderInvalid() {
-  if ( productSize.value === "null" || productQuantity.value <= 0) {
-    alert("Veuillez remplir tous les champs nécessaires");
-    return true;
-  }
 }
 
 // Async function pour lancer les différentes fonctions nécéssaires.
