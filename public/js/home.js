@@ -168,13 +168,14 @@ function EachProductToCart() {
   });
 }
 
+cartContent();
+
 function init() {
   productDisplay();
   onScrollNavDisplay();
   hamburgerMenuMobile();
   showCartMenu();
   deleteAllItems();
-  cartContent();
   changeCartIcon();
 }
 init();

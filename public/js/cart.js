@@ -26,7 +26,7 @@ function storeProduct () {
 }
 
 // Push Items to the LocalStorage
-function ItemsFromStore () {
+function ItemsFromStore2 () {
   let numberOfItems = localStorage.length;
   for (let i = 0; i < numberOfItems; i++) {
     const item = localStorage.getItem(localStorage.key(i));
@@ -159,7 +159,7 @@ function cartContent () {
     }
     addProductToCart();
     storeProduct();
-    ItemsFromStore();
+    ItemsFromStore2();
   });
 }
 
