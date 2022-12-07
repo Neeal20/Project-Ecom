@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+mongoose.set("strictQuery", false);
+
 mongoose.connect(
   'mongodb+srv://Neal20:U8g6TLXBQlflbEM6@cluster0.fybmcr3.mongodb.net/E-Commerce?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true})
