@@ -1,0 +1,121 @@
+{
+  "_id": {
+    "$oid": "6320ab0a76f046cf3b557388"
+  },
+  "price": "19.00€",
+  "date": {
+    "$date": {
+      "$numberLong": "1663085293830"
+    }
+  },
+  "__v": 0,
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et!",
+  "name": "T-shirts n°1",
+  "brand": "Nike",
+  "img": "/img/products/f1.jpg"
+},{
+  "_id": {
+    "$oid": "63219b29f5aaa678fec88d7a"
+  },
+  "price": "29.00€",
+  "date": {
+    "$date": {
+      "$numberLong": "1663146793922"
+    }
+  },
+  "__v": 0,
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et!",
+  "name": "T-shirts n°2",
+  "brand": "Adidas",
+  "img": "/img/products/f2.jpg"
+},{
+  "_id": {
+    "$oid": "63219b54f5aaa678fec88d7c"
+  },
+  "price": "39.00€",
+  "date": {
+    "$date": {
+      "$numberLong": "1663146836186"
+    }
+  },
+  "__v": 0,
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et!",
+  "name": "T-shirts n°3",
+  "brand": "Hollister",
+  "img": "/img/products/f3.jpg"
+},{
+  "_id": {
+    "$oid": "63219b5cf5aaa678fec88d7e"
+  },
+  "price": "49.00€",
+  "date": {
+    "$date": {
+      "$numberLong": "1663146844129"
+    }
+  },
+  "__v": 0,
+  "name": "T-shirts n°4",
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et!",
+  "brand": "Abercrombie",
+  "img": "/img/products/f4.jpg"
+},{
+  "_id": {
+    "$oid": "63219b87f5aaa678fec88d80"
+  },
+  "price": "59.00€",
+  "__v": 0,
+  "name": "T-shirts n°5",
+  "date": {
+    "$date": {
+      "$numberLong": "1663146887758"
+    }
+  },
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et!",
+  "brand": "Zara",
+  "img": "/img/products/f5.jpg"
+},{
+  "_id": {
+    "$oid": "63219b8df5aaa678fec88d82"
+  },
+  "price": "69.00€",
+  "date": {
+    "$date": {
+      "$numberLong": "1663146893218"
+    }
+  },
+  "__v": 0,
+  "name": "T-shirts n°6",
+  "brand": "H&M",
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et!",
+  "img": "/img/products/f6.jpg"
+},{
+  "_id": {
+    "$oid": "63219b9bf5aaa678fec88d84"
+  },
+  "price": "79.00€",
+  "date": {
+    "$date": {
+      "$numberLong": "1663146907023"
+    }
+  },
+  "__v": 0,
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et!",
+  "name": "T-shirts n°7",
+  "brand": "Pull & Bear",
+  "img": "/img/products/f7.jpg"
+},{
+  "_id": {
+    "$oid": "63219ba2f5aaa678fec88d86"
+  },
+  "price": "89.00€",
+  "date": {
+    "$date": {
+      "$numberLong": "1663146914381"
+    }
+  },
+  "__v": 0,
+  "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima fugit ipsa neque ea vero magnam maxime voluptatum odit ducimus, qui repellendus, voluptatem dolorem reiciendis tenetur quo sit. Dolorem, molestias et!",
+  "name": "T-shirts n°8",
+  "brand": "Bershka",
+  "img": "/img/products/f8.jpg"
+}
