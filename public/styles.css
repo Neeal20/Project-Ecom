@@ -1712,6 +1712,12 @@ a.google span{
   .field input, .field button{
     height: 69%;
   }
+  .summary{
+    width: 20rem;
+  }
+  .shipping{
+    width: 20rem;
+  }
 }
 
 @media (min-width: 650px) and (max-width : 1300px) {
