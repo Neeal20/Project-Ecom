@@ -11,6 +11,10 @@ const isLoggedIn = require('../middlewares/isLoggedIn');
 router.get("/",mainController.renderHomePage);
 router.get("/home",mainController.renderHomePage);
 
+router.get("/shop", (req,res) => {
+  res.render('shop');
+});
+
 // AFficher la page du profil utilisateur
 router.get("/profile", isLoggedIn, mainController.renderUserProfilePage);
 
