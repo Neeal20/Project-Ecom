@@ -3,7 +3,7 @@ const numberOfItems = localStorage.length;
 
 // Home Page création
 async function productDisplay() {
-  fetch(`http://localhost:3000/products`)
+  fetch(`/products`)
     .then((res) => res.json())
     .then((productsData) => {
       document.querySelector(".pro__container").innerHTML = productsData.map(
