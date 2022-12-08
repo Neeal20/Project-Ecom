@@ -31,6 +31,7 @@ async function changeUserPassword (req,res) {
     console.log(actualPassword);
     console.log(isMatchingPassword);
 
+
     // Si ça matche pas, on renvoie un message d'erreur
     if (!isMatchingPassword) {
       return res.status(401).render('profile', { errorMessage: "Votre mot de passe actuel est incorrect" });
