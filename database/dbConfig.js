@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
 mongoose.connect(
-  'mongodb://mongo:49ZTfdjo6Xi2aGSNHAoF@containers-us-west-105.railway.app:6341',
+  'mongodb+srv://Neal20:4mbh2mVa8rEtPDa7@cluster0.fybmcr3.mongodb.net/E-Commerce?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => {
     console.log('Mongodb connected');
@@ -32,5 +32,5 @@ process.on('SIGINT', () => {
 });
 
 // 'mongodb+srv://Neal20:U8g6TLXBQlflbEM6@cluster0.fybmcr3.mongodb.net/E-Commerce?retryWrites=true&w=majority',
-
+// mongodb://mongo:49ZTfdjo6Xi2aGSNHAoF@containers-us-west-105.railway.app:6341
 
