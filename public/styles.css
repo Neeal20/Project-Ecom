@@ -1225,6 +1225,8 @@ footer .install img {
   margin-bottom: 5rem;
 }
 
+#form__cart
+
 .baneer {
   width: 32rem;
   padding: 1rem;
@@ -1510,7 +1512,7 @@ form{
 }
 .form .field{
     position: relative;
-    height: 50px;
+    height: 3.125rem;
     width: 100%;
     margin-top: 20px;
     border-radius: 6px;
@@ -1641,16 +1643,19 @@ a.google span{
 }
 
 #form__profile {
-  height: 50vh;
+  height: 66vh;
+  width: 90%;
+  justify-content: center;
 }
 
 .input__form {
   margin: 1rem 0;
 }
 
-.form__profile--change {
-  margin-top: 2rem;
+#form__password {
+  height: 57vh;
 }
+
 
 .form .field {
     position: relative;
@@ -1658,6 +1663,11 @@ a.google span{
     width: 100%;
     margin-top: 20px;
     border-radius: 6px;
+}
+
+#body__profile {
+  height: 100vh;
+  background-color: var(--color-nav-bg);
 }
 
 #container__forms {
@@ -1677,6 +1687,38 @@ a.google span{
 }
 
 /* ------------------------------------------------- Media screen */
+@media (min-width:200px) and (max-width: 650px) {
+  .shipping{
+    width: 25rem;
+  }
+
+  .shipping .adress input {
+    width: 100%;
+  }
+
+  .shipping .country select{
+    width: 100%;
+  }
+
+  .summary {
+    width: 25rem;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 450px) {
+  #form__profile {
+    height: 79vh;
+  }
+  .field input, .field button{
+    height: 69%;
+  }
+}
+
+@media (min-width: 650px) and (max-width : 1300px) {
+  .summary{
+    width: 32rem;
+  }
+}
 
 @media (min-width: 400px) and (max-width: 1200px) {
   footer {
@@ -1780,7 +1822,6 @@ a.google span{
   }
 
   .summary {
-    width: 32rem;
     margin-top: 1rem;
   }
 

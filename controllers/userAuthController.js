@@ -83,8 +83,8 @@ async function handleSignupForm(req, res) {
       return;
     }
 
-    // - On encrypte le mot de passe avant de le stocker dans la BDD (Pourquoi ! Comme ça, si qqun attaque la BDD, il n'aura pas les MDP en clair !)
-    const saltRounds = parseInt(process.env.SALT_ROUNDS); // Le temps que prend l'algorithme pour hasher le MDP. Plus c'est grand, plus c'est safe. Plus c'est grand, plus c'est pénible pour l'utilisateur d'attendre.
+    // - On encrypte le mot de passe avant de le stocker dans la BDD
+    const saltRounds = parseInt(process.env.SALT_ROUNDS);
     const encryptedPassword = await bcrypt.hash(password, saltRounds);
 
     const role = "member";

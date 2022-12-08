@@ -3,6 +3,7 @@ const router = Router();
 const mainController = require('../controllers/mainController');
 const userAuthController = require('../controllers/userAuthController');
 const productController = require('../controllers/productController');
+const profileController = require('../controllers/profileController');
 const cartController = require('../controllers/cartController');
 const isLoggedIn = require('../middlewares/isLoggedIn');
 
@@ -44,6 +45,9 @@ router.post("/products", productController.insertToDb);
 router.put("/products/:id", productController.updateProduct);
 
 // Delete product
-router.delete("products/:id", productController.deleteProduct);
+router.delete("/products/:id", productController.deleteProduct);
+
+// Uptade user Password
+router.post("/password", profileController.changeUserPassword);
 
 module.exports = router;
