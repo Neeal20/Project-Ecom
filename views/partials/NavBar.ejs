@@ -22,15 +22,15 @@
       <div class="nav__bar">
         <ul id="nav__list">
           <li><a class="active" href="/home">Home</a></li>
-          <li><a href="/cart">Panier</a></li>
+          <li><a href="/shop">Shop</a></li>
           <% if (locals.user) { %>
             <li><a href="/profile">Profil de <%= user.firstname %></a></li>
             <li><a href="/logout">Se deconnecter</a></li>
-          <% } else { %>
-            <li><a href="/signup">S'inscrire</a></li>
-            <li><a href="/login">Se connecter</a></li>
+            <% } else { %>
+              <li><a href="/signup">S'inscrire</a></li>
+              <li><a href="/login">Se connecter</a></li>
+              <li><a href="/cart">Panier</a></li>
           <% } %>
-          <li><a href="/shop">Shop</a></li>
           <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
         </ul>
         <!-- Open cart panel -->

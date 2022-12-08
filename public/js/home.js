@@ -42,13 +42,13 @@ function cartContent () {
 
 function onScrollNavDisplay () {
   const body = document.body;
-  let lastScroll = 0;
+  let lastScroll = 1;
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
-    if (currentScroll <= 0) {
+    if (currentScroll <= 1) {
       body.classList.remove("scroll-up");
     }
-    // Si le scroll actuelle est = 0 et est suéprieur a la dernière valeur de scroll et que le body ne contient pas la classe "scroll down"
+    // Si le scroll actuelle est = 0 et est supérieur a la dernière valeur de scroll et que le body ne contient pas la classe "scroll down"
     if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
       body.classList.remove("scroll-up");
       body.classList.add("scroll-down");
