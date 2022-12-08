@@ -343,6 +343,8 @@ hr {
 
 .product__delete {
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 /* Close Arrow */
