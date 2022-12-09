@@ -17,6 +17,7 @@ const sequelize = new Sequelize({
     },
     keepAlive: true,
   },
+  logging: false,
   ssl: true,
   define: {
     // underscored: true, // C'est la technique qui tue pour que Sequelize arrête de nous casser les pieds avec le `camelCase` partout et considère les champs (created_at, updated_at, les entity_id, etc...) en snake case

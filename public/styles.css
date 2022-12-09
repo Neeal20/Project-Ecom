@@ -1844,3 +1844,31 @@ a.google span{
 }
 
 
+@media (min-width:200px) and (max-width: 1000px) {
+  #product-details {
+    display: flex;
+    flex-direction: column;
+  }
+  #product-details .single-product-img {
+    width: 100%;
+  }
+  #product-details .single-product-details {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .single-product-details input {
+    width: 100%;
+    height: 1.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+}
+
+@media (min-width:1000px) and (max-width: 1200px) {
+  #product-details .single-product-img {
+    width: 100%;
+  }
+}
