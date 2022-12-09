@@ -43,9 +43,10 @@ function cartContent () {
 function onScrollNavDisplay () {
   const body = document.body;
   let lastScroll = 0;
-  window.addEventListener("scroll", () => {
+  window.addEventListener("scroll", (e) => {
+    console.log(e);
     const currentScroll = window.pageYOffset;
-    if (currentScroll === 3) {
+    if (currentScroll <= 0) {
       body.classList.remove("scroll-up");
       body.classList.add("scroll-down");
     }
