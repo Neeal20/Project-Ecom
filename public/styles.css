@@ -368,7 +368,7 @@ hr {
 
 /* Scroll stuff to set the navBar on visible or not on Y */
 .scroll-down #header {
-  transform: translate3d(0, -100%, 0);
+  transform: translate3d(0px, -100%, 0);
 }
 
 /* Add a Shadow on scroll up navBar to see the diference between the navBar and the rest of the document */
