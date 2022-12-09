@@ -42,10 +42,10 @@ function cartContent () {
 
 function onScrollNavDisplay () {
   const body = document.body;
-  let lastScroll = 1;
+  let lastScroll = 0;
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
-    if (currentScroll <= 1) {
+    if (currentScroll === 0) {
       body.classList.remove("scroll-up");
     }
     // Si le scroll actuelle est = 0 et est supérieur a la dernière valeur de scroll et que le body ne contient pas la classe "scroll down"
