@@ -25,6 +25,8 @@ function fetchArticle(chemiseId) {
 
 // Afficher les datas du produit sur notre page
 function displayChemiseData(article) {
+  const responsiveTitle = document.getElementById("responsive__title--product");
+  responsiveTitle.textContent= article.name;
   productName.textContent = article.name;
   productPrice.textContent = article.price;
   productPrice.value = article.price;

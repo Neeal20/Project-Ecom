@@ -602,6 +602,10 @@ hr {
   background-color: rgb(222, 222, 222);
 }
 
+#responsive__title--product {
+  display: none;
+}
+
 /* ---------------------------- Banner Section ---------------------------------*/
 #banner {
   display: flex;
@@ -1633,6 +1637,35 @@ a.google span{
 @media screen and (max-width: 400px) {
     .form{
         padding: 20px 10px;
+    }
+
+    #responsive__title--product {
+      display: flex;
+      margin-bottom: 0.5rem;
+    }
+
+    #product-details .single-product-details {
+      padding-top: 0;
+    }
+
+    #name {
+      display: none;
+    }
+
+    #product-details {
+      margin-top: 15px;
+    }
+
+    #size {
+      text-align: center;
+    }
+
+    h4 {
+      line-height: 10px;
+    }
+
+    #price {
+      font-size :1.5rem
     }
     
 }
