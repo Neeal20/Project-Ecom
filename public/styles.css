@@ -1115,10 +1115,6 @@ footer .install img {
 
   /* Footer section */
 
-  .logo {
-    display: none;
-  }
-
   footer #footer-logo {
     display: none;
     justify-content: center;
@@ -1889,6 +1885,20 @@ a.google span{
   #product-details .single-product-img {
     width: 100%;
   }
+
+  #name {
+    display: none;
+  }
+
+  #product-details {
+    margin-top: 15px;
+}
+
+#product-details .single-product-details {
+  width: 50%;
+  padding-top: 0;
+}
+
   #product-details .single-product-details {
     width: 100%;
     justify-content: center;
@@ -1901,6 +1911,11 @@ a.google span{
     height: 1.9rem;
     margin-bottom: 0.5rem;
   }
+
+  #responsive__title--product {
+    display: flex;
+    margin-bottom: 0.5rem;
+  }
   
 }
 
@@ -1908,4 +1923,16 @@ a.google span{
   #product-details .single-product-img {
     width: 100%;
   }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  #product-details .single-product-img {
+    width: 75%;
+    margin: auto;
+  }
+
+  #product-details .single-product-details {
+    width: 75%;
+    margin: auto;
+}
 }
