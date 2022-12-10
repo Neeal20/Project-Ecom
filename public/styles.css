@@ -1753,6 +1753,10 @@ a.google span{
   .shipping{
     width: 20rem;
   }
+
+  #radio {
+    font-size: 0.8rem
+  }
 }
 
 @media (min-width: 650px) and (max-width : 1300px) {
