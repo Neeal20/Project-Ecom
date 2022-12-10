@@ -1757,6 +1757,10 @@ a.google span{
   #radio {
     font-size: 0.8rem
   }
+
+  #newsletter {
+    padding: 0px;
+}
 }
 
 @media (min-width: 650px) and (max-width : 1300px) {
