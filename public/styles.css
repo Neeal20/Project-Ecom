@@ -380,7 +380,6 @@ hr {
 #mobile {
   display: none;
   align-items: center;
-  z-index: 1000;
 }
 
 /* ---------------------------- Hero section ---------------------------------*/
@@ -922,7 +921,6 @@ footer .install img {
     display: flex;
     padding: 0.2rem;
     border-radius: 5px;
-    z-index: 1000;
   }
   #nav__list {
     display: flex;
